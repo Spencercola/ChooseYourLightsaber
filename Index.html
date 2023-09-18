@@ -1,0 +1,404 @@
+<html>
+<head>
+  <link href="http://allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css" />
+  <link href="star-jedi_[allfont.net].ttf" rel="stylesheet" type="text/css" />
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('http://allfont.net/allfont.css?fonts=star-jedi');
+@import url('star-jedi_[allfont.net].ttf');
+</style>
+
+  <body>
+    <div id= "title"> Star Wars Lightsaber</div>
+    <a id="saber">
+      <div id="beam"></div>
+      <img class="saber" id="notani" src="Anakin.png">
+      <img class="saber" id="notobi" src="Obi-wan.png">
+      <img class="saber" id="notvader" src="Vader(2).png">
+      <img class="saber" id="notyoda" src="yoda(2).png">
+      <img class="saber" id="notdooku" src="Dooku(2).png">
+      <img class="saber" id="notwindu" src="windu(2).png">
+      <div id="clickbox"></div>
+    </a>
+
+    <div id="hilt">
+      <div id="htext">
+        <header> Hilts </header>
+      </div>
+      <div id="obibox">
+        <img id="obi" class="hiltclicks" src="Obi-wan.png">
+      </div>
+      <div id="anibox">
+
+      </div>
+      <div id="vaderbox">
+        <img id="vader" class="hiltclicks" src="">
+      </div>
+      <div id="yodabox">
+        <img id="yoda" class="hiltclicks" src="">
+      </div>
+      <div id="dookubox">
+        <img id="dooku" class="hiltclicks" src="">
+      </div>
+      <div id="windubox">
+        <img id="windu" class="hiltclicks" src="">
+
+      </div>
+
+    </div>
+
+
+    <div id="crystal">
+        <div id="ctext">
+          <header>
+            Crystals
+          </header>
+        </div>
+          <div id="bluebox">
+            <img id="blue" class="crystalclicks" src="">
+          </div>
+          <div id="greenbox">
+            <img id="green" class="crystalclicks" src="">
+          </div>
+          <div id="redbox">
+            <img class="crystalclicks">
+          </div>
+          <div id="purplebox">
+            <img class="crystalclicks">
+          </div>
+          <div id="orangebox">
+            <img class="crystalclicks">
+          </div>
+          <div id="blackbox">
+            <img class="crystalclicks">
+          </div>
+          <div id="whitebox">
+            <img class="crystalclicks">
+          </div>
+      </div>
+
+
+
+
+</body>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('http://allfont.net/allfont.css?fonts=star-jedi');
+@import url('star-jedi_[allfont.net].ttf');
+  body{
+    background: black;
+  }
+  #title{
+    height: 120px;
+    width: 250px;
+    color: yellow;
+    text-align: center;
+    font-family: 'star jedi', 'Roboto';
+    font-size: 35pt;
+    border: 5px solid yellow;
+  }
+  #saber{
+    height: 220px;
+    width: 50px;
+    position: absolute;
+    left: 46%;
+    top: 70%;
+    transition: 1s linear;
+  }
+  #beam{
+    height: 5px;
+    width: 23px;
+    background: radial-gradient(ellipse farthest-side at bottom center, #1a82f7, #1a82f7 60%, #2F2727 99% ,#2F272700);
+    transition: .1s linear;
+    position: absolute;
+    left: 20px;
+    bottom: 208px;
+    z-index: -1;
+  }
+  .activated{
+    height: 500px;
+  }
+  #hilt{
+    background: silver;
+    height: 150px;
+    width: 300px;
+    border-color: blue;
+    position: absolute;
+    right: 1%;
+    top: 80%;
+  }
+  #htext {
+    position: absolute;
+    left: 45%;
+  }
+
+  #notani{
+    width: 100%;
+  }
+  #notobi{
+    transform: rotate(-90deg);
+    height: 40px;
+    left: -75px;
+    top: 80px;
+    position: absolute;
+
+  }
+  #notvader{
+    width: 100%;
+    position: absolute;
+    Left: 6px;
+    top: -13px;
+  }
+  #notyoda{
+    width: 100%;
+    position: absolute;
+    Left: 8px;
+    top: -7px;
+
+  }
+  #notdooku {
+    width: 100%;
+    position: absolute;
+    Left: -12px;
+    top: -37px;
+    transform: rotate(15deg);
+  }
+  #notwindu{
+    width: 100%;
+    position: absolute;
+    Left: 5px;
+    top: -4px;
+    height: 225px;
+
+  }
+  #anibox{
+    background-image: url("Anakin.png");
+    background-size: 100% 100%;
+    width: 30px;
+    height: 125px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+  }
+  #ani{
+    display: none;
+  }
+  #obi{
+    display: none;
+  }
+  #obibox{
+    transform: rotate(-90deg);
+    background-image: url("Obi-wan.png");
+    background-size: 100% 100%;
+    width: 124px;
+    height: 28px;
+    position: absolute;
+    left:  15px;
+    top: 63px;
+  }
+  #vaderbox{
+    background-image: url("Vader(2).png");
+    background-size: 100% 100%;
+    width: 30px;
+    height: 125px;
+    position: absolute;
+    left: 110px;
+    top: 15px;
+  }
+  #yodabox{
+    background-image: url("Yoda(2).png");
+    background-size: 100% 100%;
+    width: 30px;
+    height: 100px;
+    position: absolute;
+    left: 155px;
+    top: 38px;
+  }
+  #dookubox{
+    background-image: url("dooku(2).png");
+    background-size: 100% 100%;
+    width: 25px;
+    height: 110px;
+    position: absolute;
+    left: 205px;
+    top: 25px;
+  }
+  #windubox {
+  background-image: url("windu(2).png");
+  background-size: 100% 100%;
+  width: 25px;
+  height: 100px;
+  position: absolute;
+  left: 255px;
+  top: 32px;
+}
+  #crystal{
+    background: silver;
+    height: 150px;
+    width: 305px;
+    border-color: blue;
+    border-width: thin;
+    position: absolute;
+    left: 1%;
+    top: 80%;
+  }
+  #ctext{
+    position: absolute;
+    left: 40%;
+  }
+  #bluebox{
+    background-image: url("blue(2).png");
+    background-size: 100% 100%;
+    width: 20px;
+    height: 75px;
+    position: absolute;
+    left: 20px;
+    top: 38px;
+  }
+  #greenbox{
+    background-image: url("green(2).png");
+    background-size: 100% 100%;
+    width: 200px;
+    height: 75px;
+    position: absolute;
+    left: 60px;
+    top: 38px;
+  }
+  #redbox{
+      background-image: url("red(2).png");
+      background-size: 100% 100%;
+      width: 25px;
+      height: 77px;
+      position: absolute;
+      left: 100px;
+      top: 37px;
+  }
+#purplebox{
+    background-image: url("purple(2).png");
+    background-size: 100% 100%;
+    width: 145px;
+    height: 150px;
+    position: absolute;
+    left: 140px;
+    top: 37px;
+}
+#orangebox{
+    background-image: url("orange(3).png");
+    background-size: 100% 100%;
+    width: 25px;
+    height: 77px;
+    position: absolute;
+    left: 180px;
+    top: 37px;
+}
+#blackbox{
+    background-image: url("black(2).png");
+    background-size: 100% 100%;
+    width: 25px;
+    height: 77px;
+    position: absolute;
+    left: 220px;
+    top: 37px;
+}
+#whitebox{
+    background-image: url("white(2).png");
+    background-size: 100% 100%;
+    width: 25px;
+    height: 77px;
+    position: absolute;
+    left: 260px;
+    top: 37px;
+}
+#clickbox{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
+
+<script>
+var clicks = document.querySelectorAll(".saber");
+var hiltclicks = document.querySelectorAll(".hiltclicks");
+
+function hideAllSabers(){
+  for (click of clicks){
+    click.style.display="none";
+  }
+}
+function showSaber(name){
+  hideAllSabers();
+  document.querySelector("#"+name).style.display="block";
+}
+
+
+showSaber("notani");
+
+
+document.querySelector("#obibox").onclick = function(){
+  showSaber("notobi");
+}
+document.querySelector("#anibox").onclick = function(){
+  showSaber("notani");
+}
+document.querySelector("#vaderbox").onclick = function(){
+  showSaber("notvader");
+}
+document.querySelector("#yodabox").onclick = function(){
+  showSaber("notyoda");
+}
+document.querySelector("#dookubox").onclick = function(){
+  showSaber("notdooku");
+}
+document.querySelector("#windubox").onclick = function(){
+  showSaber("notwindu");
+}
+
+//This is to change Crystals
+
+document.querySelector("#bluebox").onclick = function(){
+  document.querySelector("#beam").style.background = 'radial-gradient(ellipse farthest-side at bottom center, #1a82f7, #1a82f7 60%, #2F2727 99% ,#2F272700)';
+};
+document.querySelector("#greenbox").onclick = function(){
+  document.querySelector("#beam").style.background = 'radial-gradient(ellipse farthest-side at bottom center, #0fc41b, #0fc41b 60%, #2F2727 99% ,#2F272700)';
+};
+document.querySelector("#redbox").onclick = function(){
+  document.querySelector("#beam").style.background = 'radial-gradient(ellipse farthest-side at bottom center, #e21818, #e21818 70%, #2F2727 99% ,#2F272700)';
+};
+document.querySelector("#purplebox").onclick = function(){
+  document.querySelector("#beam").style.background = 'radial-gradient(ellipse farthest-side at bottom center, #e018d9, #e018d9 60%, #2F2727 99% ,#2F272700)';
+};
+document.querySelector("#orangebox").onclick = function(){
+  document.querySelector("#beam").style.background = 'radial-gradient(ellipse farthest-side at bottom center, #e57e16, #e57e16 60%, #2F2727 99% ,#2F272700)';
+};
+document.querySelector("#blackbox").onclick = function(){
+  document.querySelector("#beam").style.background = 'radial-gradient(ellipse farthest-side at bottom center, #000000, #000000 70%, #f9faff 99% ,#f9faff00)';
+};
+document.querySelector("#whitebox").onclick = function(){
+  document.querySelector("#beam").style.background = 'radial-gradient(ellipse farthest-side at bottom center, #eaeaea, #eaeaea 60%, #2F2727 99% ,#2F272700)';
+};
+
+var audioOn = new Audio('Lightsaber Turn On-SoundBible.com-1637663395.mp3');
+var audioOff = new Audio('off-SoundBible-647586083.mp3');
+var audioHum = new Audio('Hum.mp3');
+audioHum.loop = true;
+
+document.querySelector("#clickbox").onclick = function(){
+  if(document.querySelector("#beam").style.height == "500px"){
+    document.querySelector("#beam").style.height = "5px";
+    audioOff.play();
+    audioHum.pause();
+  }else{
+    audioOn.play();
+    document.querySelector("#beam").style.height = "500px";
+    audioHum.play();
+  }
+};
+
+
+</script>
+
+
+</html>
